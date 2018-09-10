@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru");
+
+* {
+  box-sizing: border-box;
+  --responsive: calc(
+    (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) *
+      ((100vw - 420px) / (1200 - 420))
+  );
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+.portfolio-content {
+  width: 100vw;
+  position: relative;
+}
+
+.portfolio-header {
+  height: 60px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.portfolio-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-shadow: 2px 2px black;
+}
+
+.portfolio-main__content {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-main__title {
+  width: 100vw;
+  margin: 40px;
+}
+
+.portfolio-main__title h1 {
+  --max-font: 50;
+  --min-font: 30;
+  font-size: var(--responsive);
+}
+
+.portfolio-main__description {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --max-font: 30;
+  --min-font: 20;
+  font-size: var(--responsive);
+  width: 80%;
+  flex: 2;
+  text-align: center;
+}
+
+.portfolio-main__dark-effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.075), black);
+}
+
+.portfolio-main__social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-main__buttons {
+  display: flex;
+}
+
+.portfolio-main__button {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin: 15px;
+}
+
+.portfolio-main__button img {
+  width: 100%;
+}
+
+.portfolio-main__social a:hover {
+  transform: rotate(20deg);
+  transition: transform 0.5s ease;
+}
+
+.large-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#large-header {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+footer h4 {
+  margin: 0px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.portfolio-footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.knowledge {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.knowledge__card {
+  width: 90px;
+  padding: 10px;
+}
+
+.knowledge__card span {
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1000px) {
+  * {
+    font-size: calc(var(--max-font) * 1px);
+  }
+}
+
+@media (max-width: 420px) {
+  * {
+    font-size: calc(var(--min-font) * 1px);
+  }
+}
