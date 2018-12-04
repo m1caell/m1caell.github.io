@@ -27,6 +27,7 @@ body {
 .portfolio-content {
   width: 100vw;
   position: relative;
+  overflow-x: hidden;
 }
 
 .portfolio-header {
@@ -127,7 +128,7 @@ body {
 footer h4 {
   margin: 0px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-size: 20px;
 }
 
@@ -148,6 +149,12 @@ footer h4 {
 .knowledge__card {
   width: 90px;
   padding: 10px;
+  transform: rotate(5deg);
+  transition: transform 0.5s;
+}
+
+.knowledge__card:hover {
+  transform: rotate(0deg);
 }
 
 .knowledge__card span {
@@ -157,22 +164,28 @@ footer h4 {
 }
 
 .websites-developed {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  display: none;
 }
 
-/* Slideshow container */
+.websites-developed > h2 {
+  color: white;
+  text-align: center;
+  margin: 40px;
+  font-size: 20px;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  padding: 0 5%;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -188,38 +201,15 @@ footer h4 {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -235,7 +225,6 @@ footer h4 {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
